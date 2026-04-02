@@ -1,4 +1,4 @@
-daemon/realtimesst.log
-daemon/.venv
+*.log
+**/.venv
 __pycache__/
 *.py[cod]

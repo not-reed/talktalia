@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "talktalia",
+      "name": "Talktalia",
+      "version": "0.1.0",
+      "author": "reed",
+      "description": "Speech-to-text dictation for Noctalia — toggle to dictate, Whisper-powered, with text injection and visual feedback",
+      "repository": "https://github.com/not-reed/talktalia",
+      "minNoctaliaVersion": "4.7.4",
+      "license": "MIT",
+      "lastUpdated": "2026-04-02T00:00:00Z"
+    }
+  ]
+}
