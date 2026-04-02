@@ -39,7 +39,7 @@ Item {
     // ─── IPC ─────────────────────────────────────────────────────
 
     IpcHandler {
-        target: "plugin:talktalia"
+        target: "plugin:" + (pluginApi?.pluginId ?? "talktalia")
 
         function toggle() {
             root.toggle();
