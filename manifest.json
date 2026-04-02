@@ -1,0 +1,28 @@
+{
+  "id": "talktalia",
+  "name": "Talktalia",
+  "version": "0.1.0",
+  "minNoctaliaVersion": "4.7.4",
+  "author": "reed",
+  "license": "MIT",
+  "description": "Speech-to-text dictation for Noctalia — toggle to dictate, Whisper-powered, with text injection and visual feedback",
+  "tags": ["Bar", "Productivity", "Accessibility"],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "model": "base",
+      "language": "en",
+      "daemonPath": "dictation-daemon",
+      "silenceDuration": 1.5,
+      "hideInactive": false,
+      "autoStart": false
+    }
+  }
+}

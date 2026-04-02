@@ -1,0 +1,4 @@
+daemon/realtimesst.log
+daemon/.venv
+__pycache__/
+*.py[cod]
