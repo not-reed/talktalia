@@ -39,7 +39,7 @@ Item {
     // ─── IPC ─────────────────────────────────────────────────────
 
     IpcHandler {
-        target: "plugin:dictation-indicator"
+        target: "plugin:talktalia"
 
         function toggle() {
             root.toggle();
