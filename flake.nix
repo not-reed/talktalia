@@ -35,15 +35,14 @@
             if [ ! -f "$VENV_DIR/.synced" ] || \
                [ "$PROJECT_DIR/pyproject.toml" -nt "$VENV_DIR/.synced" ]; then
               mkdir -p "$VENV_DIR"
-              cd "$PROJECT_DIR"
-              UV_PYTHON=python3.11 UV_PROJECT_ENVIRONMENT="$VENV_DIR/venv" uv sync 2>&1 | while IFS= read -r line; do
+              UV_PYTHON=python3.11 UV_PROJECT_ENVIRONMENT="$VENV_DIR/venv" uv sync --project "$PROJECT_DIR" 2>&1 | while IFS= read -r line; do
                 printf '{"event":"model_loading","detail":"%s"}\n' "$line"
               done
               touch "$VENV_DIR/.synced"
             fi
 
-            cd "$PROJECT_DIR"
-            exec env UV_PYTHON=python3.11 UV_PROJECT_ENVIRONMENT="$VENV_DIR/venv" uv run python -m dictation_daemon "$@"
+            cd "$VENV_DIR"
+            exec env UV_PYTHON=python3.11 UV_PROJECT_ENVIRONMENT="$VENV_DIR/venv" uv run --project "$PROJECT_DIR" python -m dictation_daemon "$@"
           '';
 
           profile = ''
